@@ -12,8 +12,10 @@ Usage
 	config=gitconfig.config("~/.gitconfig")
 	print config.user.name, config.user.email
 	print config.list
+    >>> [...]
 	config.set("section","key","value")
     print config.get("section","key")
+    >>> "value"
     config.unset("section","key")
     # shorthands:
     config.section.key="value"
