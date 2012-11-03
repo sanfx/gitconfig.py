@@ -4,6 +4,11 @@
 
 from distutils.core import setup
 import os
+from os.path import abspath, dirname, join
+
+
+readme = open(join(dirname(abspath(__file__)),'README.rst')).read()
+
 
 
 def is_package(path):
@@ -28,9 +33,9 @@ def find_packages(path, base=""):
     return packages
 
 setup(name='gitconfig',
-      version='0.0.1',
-      description='gitconfig',
-      long_description=open("README.rst").read(),
+      version='0.0.2',
+      description='git config files wrapper',
+      long_description=readme,
       author='cancerhermit',
       author_email='cancerhermit@gmail.com',
       url='http://github.com/cancerhermit/PyGitConfig/',
